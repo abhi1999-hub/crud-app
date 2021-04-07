@@ -31,7 +31,7 @@ const state  = {
 }
 const connectDB = async ()=>{
     try{
-        MongoClient.connect(url,{useNewUrlParser:true,useUnifiedTopology: true },function(err, db) {
+        MongoClient.connect(url,{useNewUrlParser:true,useUnifiedTopology: true,server: { auto_reconnect: true }  },function(err, db) {
             if (err) throw err;
             state.db=db.db("new_db");
             console.log(state.db)
