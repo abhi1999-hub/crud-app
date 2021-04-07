@@ -23,6 +23,7 @@
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 url = "mongodb+srv://root:abhilash@27@cluster0.jtcuz.mongodb.net";
+
 console.log(url)
 let database;
 const mongoOptions={useNewUrlParser:true};
